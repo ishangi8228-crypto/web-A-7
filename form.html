@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Me</a> |
+        <a href="form.html">Registration</a> |
+        <a href="login.html">Login</a>
+    </nav>
+
+    <hr>
+
+    <h1>Registration Form</h1>
+
+    <form method="get" autocomplete="on">
+
+        <label>Name:</label>
+        <input type="text" placeholder="Write your name" required>
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Write your email" required>
+
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password"
+               placeholder="Write your password"
+               minlength="8"
+               maxlength="20"
+               required>
+
+        <br><br>
+
+        <label>Age:</label>
+        <input type="number" placeholder="Enter your age" required>
+
+        <br><br>
+
+        <label>Gender:</label>
+
+        <input type="radio" name="gender" value="male">
+        <label>Male</label>
+
+        <input type="radio" name="gender" value="female">
+        <label>Female</label>
+
+        <input type="radio" name="gender" value="other">
+        <label>Other</label>
+
+        <br><br>
+
+        <label>Date of Birth:</label>
+        <input type="date">
+
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="Enter phone number">
+
+        <br><br>
+
+        <label>Course:</label>
+
+        <select>
+            <option value="">Select Course</option>
+            <option value="cse">CSE</option>
+            <option value="ai">CSE - AI</option>
+            <option value="ece">ECE</option>
+            <option value="it">IT</option>
+        </select>
+
+        <br><br>
+
+        <label>Address:</label>
+        <br>
+        <textarea rows="4" cols="30"
+                  placeholder="Enter your address"></textarea>
+
+        <br><br>
+
+        <input type="checkbox" required>
+        <label>I agree to the terms and conditions</label>
+
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>

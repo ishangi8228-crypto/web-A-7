@@ -1,0 +1,29 @@
+<html lang="en">
+    <head>
+        <style>
+            h1{
+                color:blue;
+                background-color:antiquewhite;
+                font-family:time new roman;
+                font-wei</body>
+        </head>
+        <figure>
+            <img src="images/images.jpg" alt ="Protfile pictture" width="200" height="200">
+            img src=images.jpg"alt="Protfile picture">
+            <figcaption>Animated Profile picture</figcaption>
+            </figure>
+            <table border="1" style=border-collapse:collapse;">
+                <tr>
+                    <td></td>
+                    <th colspan="3">
+                        student information
+                    </th>
+                </tr>
+                <tr>
+                    <th style="padding:10px;".name</th.
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>Javascript</th>
+                </tr>
+
+                <tr>
