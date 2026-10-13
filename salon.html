@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Grace | Hair Salon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Glow <span>&</span> Grace</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#prices">Prices</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="nav-btn">Book Appointment</a>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">YOUR BEAUTY, OUR PASSION</p>
+            <h1>Good Hair Days<br>Start <span>Here.</span></h1>
+            <p>Discover your style, embrace your beauty and let your hair tell your story.</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Beautiful hair salon">
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=85" alt="Salon interior">
+        </div>
+        <div class="about-content">
+            <p class="tagline">WELCOME TO GLOW & GRACE</p>
+            <h2>Where Style Meets <span>Elegance</span></h2>
+            <p>We believe everyone deserves to feel confident and beautiful. Our salon offers personalised hair care, modern styling and a relaxing experience.</p>
+            <p>Our goal is to make every visit special and help you discover a look that suits your personality.</p>
+            <a href="#contact" class="btn">Visit Our Salon</a>
+        </div>
+    </section>
+
+    <section class="services section" id="services">
+        <p class="tagline">WHAT WE OFFER</p>
+        <h2>Our Signature Services</h2>
+        <p class="section-desc">Everything your hair needs to look and feel amazing.</p>
+
+        <div class="service-container">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Haircut and styling">
+                <h3>Haircut & Styling</h3>
+                <p>Fresh cuts and beautiful styles designed just for you.</p>
+                <span>Starting at ₹499</span>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Hair colouring">
+                <h3>Hair Colouring</h3>
+                <p>Add a new dimension to your look with gorgeous colours.</p>
+                <span>Starting at ₹999</span>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Hair treatment">
+                <h3>Hair Spa</h3>
+                <p>Relax and nourish your hair with our luxurious treatments.</p>
+                <span>Starting at ₹799</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="prices section" id="prices">
+        <p class="tagline">SIMPLE & TRANSPARENT</p>
+        <h2>Our Price List</h2>
+
+        <div class="price-list">
+            <div class="price-item"><span>Basic Haircut</span><span>₹499</span></div>
+            <div class="price-item"><span>Hair Wash & Blow Dry</span><span>₹399</span></div>
+            <div class="price-item"><span>Hair Spa</span><span>₹799</span></div>
+            <div class="price-item"><span>Global Hair Colour</span><span>₹1,499</span></div>
+            <div class="price-item"><span>Hair Styling</span><span>₹699</span></div>
+        </div>
+        <p class="price-note">Prices may vary depending on hair length and service.</p>
+    </section>
+
+    <section class="contact section" id="contact">
+        <p class="tagline">WE WOULD LOVE TO SEE YOU</p>
+        <h2>Book Your Appointment</h2>
+        <p class="section-desc">Fill out the form and take the first step towards your new look.</p>
+
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Full Name" required>
+            <input type="email" id="email" placeholder="Your Email Address" required>
+            <input type="tel" id="phone" placeholder="10-digit Phone Number" pattern="[0-9]{10}" title="Enter a 10-digit phone number" required>
+
+            <select id="service" required>
+                <option value="">Choose a Service</option>
+                <option>Haircut & Styling</option>
+                <option>Hair Colouring</option>
+                <option>Hair Spa</option>
+                <option>Hair Wash & Blow Dry</option>
+            </select>
+
+            <input type="date" id="date" required>
+            <textarea id="message" placeholder="Any special requests?"></textarea>
+            <button type="submit" class="btn">Book Now</button>
+            <p id="formMessage"></p>
+        </form>
+    </section>
+
+    <footer>
+        <h2>Glow <span>&</span> Grace</h2>
+        <p>Your beauty, our passion.</p>
+        <p>📍 Indirapuram, Ghaziabad, Uttar Pradesh</p>
+        <p>📞 +91 98765 43210</p>
+        <p class="copyright">© 2026 Glow & Grace Hair Salon. All rights reserved.</p>
+    </footer>
+
+    <button id="topButton" title="Back to top">↑</button>
+
+    <script>
+        const bookingForm = document.getElementById("bookingForm");
+        const formMessage = document.getElementById("formMessage");
+        const dateInput = document.getElementById("date");
+        const topButton = document.getElementById("topButton");
+
+        // Set today's date as the earliest appointment date
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, "0");
+        const day = String(today.getDate()).padStart(2, "0");
+        const todayDate = `${year}-${month}-${day}`;
+
+        dateInput.min = todayDate;
+
+        // Handle appointment form submission
+        bookingForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const service = document.getElementById("service").value;
+            const date = dateInput.value;
+
+            if (date < todayDate) {
+                formMessage.textContent = "Please select a future date.";
+                return;
+            }
+
+            formMessage.textContent =
+                `Thank you, ${name}! Your appointment request for ${service} on ${date} has been received.`;
+
+            bookingForm.reset();
+            dateInput.min = todayDate;
+        });
+
+        // Show the back-to-top button when scrolling
+        window.addEventListener("scroll", function() {
+            if (window.scrollY > 300) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        });
+
+        // Scroll to the top
+        topButton.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+
+</body>
+</html>
